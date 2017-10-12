@@ -11,7 +11,6 @@
 ### Actions
 
 > Actions也可以用于改变状态，不过是通过触发mutation实现的，重要的是可以包含异步操作、判断、流程控制，其辅助函数是mapActions
->
 
 ### Getters
 
