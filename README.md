@@ -35,3 +35,21 @@
 ### Getters
 
 		有些状态需要做二次处理，就可以使用getters，其接收唯一参数值state
+
+### Vuex的原理和使用方法
+
+		单向数据流
+			一个应用可以看作是由三部分组成: View,Actions,State,
+			数据的流动也是从 View => Actions => State => View
+			以此达到数据的单向流动。但是项目较大的，组件嵌套过多的时候，
+			多组件共享同一个State会在数据传递时出现很多问题，Vuex就是为了解决这些问题而产生的
+		
+		Vuex可以被看作项目中所有组件的数据中心，我们将所有组件中共享的State抽离出来，
+		任何组件都可以访问和操作我们的数据中心。
+		
+		Vuex的组成：
+		
+			一个实例化的Vuex.Store由state,mutations和actions三个属性组成：
+				state中保存着共有数据，改变state中的数据只有通过mutations中的方法，
+				并且mutations中的方法必须是同步的，如果要写异步的方法，
+				需要写在actions中，并通过commit到mutations中进行state数据的更改。
